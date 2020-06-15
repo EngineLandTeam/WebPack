@@ -31,5 +31,9 @@
     "webpack"
   ],
   "author": "@T3am. <EngineLandTeam@gmail.com> (https://EngineLand.dev)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
 }

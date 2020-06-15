@@ -113,3 +113,41 @@ git commit -m "Inicio de Repositorio"
 <!-- Command -->
 
 ---
+
+## INSTALACION DE DEPENDENCIAS
+
+<!-- Acciones -->
+
+### Acciones
+
+- Instalamos Webpack en modo de desarrollo
+- Instalamos Webpack -D
+- Instalamos Bootstrap en modo de desarrollo
+- Instalamos @Fontawesome free en modo de desarrollo
+
+<!-- Acciones -->
+
+<!-- Command -->
+
+### Command
+
+```
+npm i webpack@latest -D
+_npm i webpack -D -E_
+_npm install webpack -D -E_
+_npm install webpack --save-dev --save-exact_
+_npm install webpack@latest --save-dev_
+npm i -D webpack-cli@latest
+npm i -D bootstrap@latest
+npm i -D @fortawesome/fontawesome-free
+
+_npx webpack --entry ./index.js --output ./bundle.js --mode development_
+
+git add .
+git commit -m "Instalacion de Dependencias"
+
+```
+
+<!-- Command -->
+
+---
