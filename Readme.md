@@ -4,90 +4,14 @@
 
 # GUIAS DE USO DE WEBPACK
 
-## GLOBAL
-
-<!-- Acciones -->
-
-### Acciones
-
-**Actualizacion de Npm**
-
-- npm install -g _[paquete]@[version]_
-
-**Configuracion Global de Npm**
-
-- npm set init.author.name _@Nombre de usuario_
-- npm set init.author.email _Email de usuario_
-- npm set init.author.url _Url de Usuario_
-- npm set init.license _Licencia_
-
-**Cuenta de Npmjs.com**
-
-- npm adduser _usuario y password_
-
-**Flags**
-
-**_Alias_**
-
-- -i, add, install _Instalacion_
-- -g, --global _Instalacion global_
-
-**_Instalacion_**
-
-- npm install [dir] _Instalacion desde directorio local o archivo comprimido_
-- npm install [url] _Instalacion desde un repositorio remoto_
-- npm install [paquete]@[version] _Instala paquete con su propia version (latest por defecto)_
-- npm install [@dev][paquete]@[version] _Instala desde el registro del desarrollador del paquete_
-- @latest _Ultima actualizacion del paquete_
-
-**_Adicionales_** _(modificadores para package.json)_
-
-- -S, --save _opcion por defecto, registrado en dependecies_
-- -E, --save-exact _registra la version exacta_
-- -E, --save-bundle _registra la version exacta_
-- -D, --save-dev _en desarrollo, registrado en devDependecies_
-- -P, --save-prod _produccion, registrado en dependecies_
-- -O, --save-optional _opcional, registrado en optionalDependecies_
-- --no-save _no guarda registro alguno_
-
-**Configuracion Global de Git**
-
-- git config --global user.name _@Nombre de usuario_
-- git config --global user.email _Email de usuario_
-- git config --global core.editor _Editor de git_
-- git config --list _Visualizamos la configuracion de git_
-
-<!-- Acciones -->
-
-<!-- Command -->
-
-### Command
-
-```
-npm install -g npm@latest
-npm set init.author.name "@T3am."
-npm set init.author.email "EngineLandTeam@gmail.com"
-npm set init.author.url "https://EngineLand.dev"
-npm set init.license "MIT"
-npm adduser
-
-git config --global user.name "@T3am."
-git config --global user.email "EngineLandTeam@gmail.com"
-git config --global core.editor "C:\\Program Files\\Microsoft VS Code\\Code.exe" --wait
-```
-
-<!-- Command -->
-
----
-
 ## INICIO DE REPOSITORIO
 
 <!-- Acciones -->
 
 ### Acciones
 
-- Creamos una nueva carpeta
-- Creamos carpetas src
+- Creamos y accedemos a carpeta WebPack
+- Creamos Estructura de Carpetas
 - Inicializamos Git
 - Inicializamos Npm
 - Configuramos Package.json
@@ -114,16 +38,13 @@ git commit -m "Inicio de Repositorio"
 
 ---
 
-## INSTALACION DE DEPENDENCIAS
+## INSTALACION DE WEBPACK
 
 <!-- Acciones -->
 
 ### Acciones
 
-- Instalamos Webpack en modo de desarrollo
-- Instalamos Webpack -D
-- Instalamos Bootstrap en modo de desarrollo
-- Instalamos @Fontawesome free en modo de desarrollo
+- Instalamos Webpack
 
 <!-- Acciones -->
 
@@ -132,19 +53,98 @@ git commit -m "Inicio de Repositorio"
 ### Command
 
 ```
-npm i webpack@latest -D
-_npm i webpack -D -E_
-_npm install webpack -D -E_
-_npm install webpack --save-dev --save-exact_
-_npm install webpack@latest --save-dev_
+npm i -D webpack@latest
+_npm i -D -E webpack_
+_npm install --save-dev --save-exact webpack_
 npm i -D webpack-cli@latest
-npm i -D bootstrap@latest
-npm i -D @fortawesome/fontawesome-free
+npm i -D webpack-dev-server
+
 
 _npx webpack --entry ./index.js --output ./bundle.js --mode development_
 
 git add .
-git commit -m "Instalacion de Dependencias"
+git commit -m "Instalacion de WebPack"
+
+```
+
+<!-- Command -->
+
+---
+
+## LOADER PLUGINS
+
+<!-- Acciones -->
+
+### Acciones
+
+- Instalamos Babel
+
+- Instalamos Sass
+- Instalamos Css
+- Instalamos Stylus
+
+- Instalamos Bootstrap
+- Instalamos @Fontawesome free
+
+- Instalamos plugins anexos
+
+**_Core_**
+
+- @babel/core
+- node-sass
+
+**_Loader_**
+
+- babel-loader _reconoce e interpreta archivos de babel_
+- html-loader _reconoce e interpreta html_
+- Css-loader _reconoce e interpreta css_
+- Style-loader _injecta css dentro de html_
+- sass-loader _reconoce e interpreta sass_
+
+**_Instalamos Plugin_**
+
+- @babel/polyfill
+- @babel/preset-env
+- mini-css-extract-plugin _injecta css dentro de html_
+- html-webpack-plugin _injecta el vinculo a css dentro de html_
+
+<!-- Acciones -->
+
+<!-- Command -->
+
+### Command
+
+```
+npm i -D @babel/core
+npm i -D babel-loader
+npm i -D html-loader
+npm i -D @babel/polyfill
+npm i -D @babel/preset-env
+*npm i -D @babel/core babel-loader html-loader @babel/polyfill @babel/preset-env*
+
+npm i -D css-loader
+npm i -D sass-loader
+npm i -D node-sass
+npm i -D style-loader
+*npm i -D css-loader sass-loader node-sass style-loader*
+
+npm i -D html-webpack-plugin
+npm i -D bootstrap@latest
+npm i -D @fortawesome/fontawesome-free
+*npm i -D html-webpack-plugin bootstrap@latest @fortawesome/fontawesome-free*
+
+npm i -D mini-css-extract-plugin
+npm i -D file-loader
+npm i -D babel-minify-webpack-plugin
+npm i -D copy-webpack-plugin
+npm i -D optimize-css-assets-webpack-plugin
+npm i -D clean-webpack-plugin
+*npm i -D mini-css-extract-plugin file-loader babel-minify-webpack-plugin copy-webpack-plugin optimize-css-assets-webpack-plugin clean-webpack-plugin*
+
+*npm i -D @babel/core babel-loader html-loader @babel/polyfill @babel/preset-env html-webpack-plugin bootstrap@latest @fortawesome/fontawesome-free mini-css-extract-plugin @fortawesome/fontawesome-free file-loader babel-minify-webpack-plugin copy-webpack-plugin optimize-css-assets-webpack-plugin clean-webpack-plugin*
+
+git add .
+git commit -m "Loader Plugins"
 
 ```
 
